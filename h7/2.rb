@@ -1,27 +1,35 @@
-class AirPlane
-seats= Array.new(6) { Array.new(27) }
-def print_seats
+
+def zerolator (seats)
+	for col in 0..26
+		for line in 0..5
+			seats[line][col] = 0
+		end
+	end
+end
+def print_seats(seats)
 	k=0
 	i=0
-	for k in 0..27
-		for i in 0..6
-			print(seats[i][k]);
+	for k in 0..26
+		for i in 0..5
+			print(seats[i][k])
 			if i==2
 				print(" ")
 				end
 		end
-		print (" ")
+		puts "\n" 
 	end
 
 end
-def addSeats
+def random_group()
+	return Random.rand(3)+1
+end
+def addSeats(seats)
 		mesta =0
 		colon =0
 		roll=0
-		random = Random.new
-		random.rand(0...3)
-		while mesta<163 do
-			random.rand(0...3)	
+		random=0
+		while mesta<163 
+			random=random_group()	
 		# grupa ot 1
 			if random==1 
 				for colon in 0..26
@@ -37,9 +45,9 @@ def addSeats
 		# grupa ot 2
 			if random == 2
 				colon=0
-				for colon in 0..27
+				for colon in 0..26
 				roll=0
-					for roll in 0..3
+					for roll in 0..2
 						if(seats[roll*2][colon]==0)||(seats[roll*2+1][colon]==0)
 							seats[roll*2][colon]=1
 							seats[roll*2+1][colon]=1
@@ -54,7 +62,7 @@ def addSeats
 				colon=0
 				for colon in 0..26
 					roll=0
-					while roll<6 do
+					while roll<6 
 						if(seats[roll][colon]==0) || (seats[roll+1][colon]==0) || (seats[roll+2][colon]==0)
 							seats[roll][colon]=1
 							seats[roll+1][colon]=1
@@ -69,7 +77,8 @@ def addSeats
 		end	
 	
 	end
-end
-plane=AirPlane.new
-plane.addSeats
-plane.print_seats
+seats= Array.new(6){ Array.new(27) }
+zerolator(seats)
+print_seats(seats)
+addSeats(seats)
+print_seats(seats)
