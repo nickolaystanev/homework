@@ -1,6 +1,5 @@
 class AirPlane
-seats= Array.new(6) { Array.new(27) }
-def print_seats
+def print_seats(seats)
 	k=0
 	i=0
 	for k in 0..27
@@ -14,7 +13,7 @@ def print_seats
 	end
 
 end
-def addSeats
+def addSeats(seats)
 		mesta =0
 		colon =0
 		roll=0
@@ -70,6 +69,7 @@ def addSeats
 	
 	end
 end
+seats= Array.new(6) { Array.new(27) }
 plane=AirPlane.new
-plane.addSeats
-plane.print_seats
+plane.addSeats(seats)
+plane.print_seats(seats)
