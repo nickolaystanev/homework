@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-
+// link na wikito http://nikistanev.wikispaces.com/home
 class Ptotoype{
 	public int get_x(){
 		int x=0;
