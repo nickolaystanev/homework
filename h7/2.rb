@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 def zerolator (seats)
 	for col in 0..26
@@ -6,6 +7,9 @@ def zerolator (seats)
 		end
 	end
 end
+=======
+class AirPlane
+>>>>>>> b37c08a00bc3f70016fe8e7f0283d221b2121149
 def print_seats(seats)
 	k=0
 	i=0
@@ -20,9 +24,12 @@ def print_seats(seats)
 	end
 
 end
+<<<<<<< HEAD
 def random_group()
 	return Random.rand(3)+1
 end
+=======
+>>>>>>> b37c08a00bc3f70016fe8e7f0283d221b2121149
 def addSeats(seats)
 		mesta =0
 		colon =0
@@ -77,8 +84,16 @@ def addSeats(seats)
 		end	
 	
 	end
+<<<<<<< HEAD
 seats= Array.new(6){ Array.new(27) }
 zerolator(seats)
 print_seats(seats)
 addSeats(seats)
 print_seats(seats)
+=======
+end
+seats= Array.new(6) { Array.new(27) }
+plane=AirPlane.new
+plane.addSeats(seats)
+plane.print_seats(seats)
+>>>>>>> b37c08a00bc3f70016fe8e7f0283d221b2121149
