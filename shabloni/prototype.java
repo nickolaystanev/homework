@@ -58,6 +58,8 @@ class Ptotoype{
 	public static void main(String[] args){
 		Ptotoype object= new Ptotoype();
 		int [] array = new int [10];
+		x=work.get_x();
 		
 	}
+
 }
