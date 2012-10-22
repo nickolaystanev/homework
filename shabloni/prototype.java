@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-
+// link na wikito http://nikistanev.wikispaces.com/home
 class Ptotoype{
 	public int get_x(){
 		int x=0;
@@ -58,6 +58,8 @@ class Ptotoype{
 	public static void main(String[] args){
 		Ptotoype object= new Ptotoype();
 		int [] array = new int [10];
+		x=work.get_x();
 		
 	}
+
 }
