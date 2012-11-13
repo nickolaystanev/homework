@@ -1,0 +1,58 @@
+//Технологична училище електронни системи към ТУ -София http://www.elsys-bg.org/
+
+// 11 А
+
+// 20
+
+//Николай Василев Станев
+
+//        Да се разработи програма, която изисква от потребителя да въведе целочислено число x, където 0<=x<10. Да се инициализира масив от 10 елемента. Да се намерят първите 10 стойности на функцията cos(x) в интервала [0; +?), в които третата цифра след десетичната запетая е x. Пример при cos(1) = 0.540302306 третата цифра след десетичната запетая е 0. При cos(2) = -0.416146837 третата цифра след десетичната запетая е 6. Намерените стойности да се зададат като стойности на елементите в масива. Елементите на масива да се изведат на стандартния изход.
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+
+using namespace std;
+
+int main ()
+{
+  int x,ibroqch,ibroqch2,k,temp_int, z,icurrent,arr_size;
+  float temp , real;
+  float array[10];
+  
+  printf("vuvedi x");
+  scanf("%d",&x);
+
+  k=1;
+  do{
+              if (x>0) k=0;
+              else if (x<10) k=0;
+              else {
+                     printf("vuvedi x\n");
+                     scanf("%d",&x);
+
+                   }             
+  } while(k==1);
+  ibroqch=0;
+  while(ibroqch < 10)
+     {
+     real = cos (icurrent);
+     temp = real*1000;
+     temp_int=(int)temp;
+     if ((temp_int % 10) == x)
+        {
+         array[ibroqch]=real;
+         ibroqch++;          
+        }  
+     icurrent++;                                          
+     }
+     
+   for (ibroqch=0; ibroqch<10 ;ibroqch++){
+       printf("%f \n" , array[ibroqch] );
+       }  
+   
+    cout<<"Press any key";
+    cin >> z;
+   return 0 ;
+}
